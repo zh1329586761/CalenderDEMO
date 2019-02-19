@@ -1,0 +1,98 @@
+<!--
+  Generated template for the UserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>用户</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+  
+    <div *ngIf="!userinfo" >
+      
+          <ion-item [navPush]="LoginPage">
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/xfn.png">
+              </ion-avatar>
+              <h2>用户名:{{userinfo.username}}</h2>
+              <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+          </ion-item>
+          <ion-item-divider></ion-item-divider>
+    </div>
+    
+    <ion-list *ngIf="userinfo" >
+      <ion-item [navPush]="PersonalPage">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/xfn.png">
+          </ion-avatar>
+          <h2>用户名:{{userinfo.username}}</h2>
+          <p>璀璨钻石</p>
+          <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+      </ion-item>
+    </ion-list>
+  
+  
+    <ion-list inset >
+        <ion-item-divider></ion-item-divider>
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="pricetags" item-start></ion-icon>
+              <span>特征管理</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+  
+        
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="list" item-start></ion-icon>
+              <span>职业树管理</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+  
+        
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="trending-down" item-start></ion-icon>
+              <span>自定义分类管理</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="time" item-start></ion-icon>
+              <span>时间管理</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+  
+  
+  
+        <ion-item-divider></ion-item-divider>
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="notifications" item-start></ion-icon>
+              <span>消息设置</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+  
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="refresh-circle" item-start></ion-icon>
+              <span>检查更新</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="trash" item-start></ion-icon>
+              <span>清除本地数据库</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+
+        <ion-item color="light" [navPush]="SettingsListPage">
+            <ion-icon name="headset" item-start></ion-icon>
+              <span>帮助反馈</span>
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+  

@@ -1,0 +1,91 @@
+<div class="bottom">
+        <div class="bottom_header" *ngIf="isHidden" >
+            <ion-segment [(ngModel)]="tabs">
+              
+                <ion-segment-button value="tx">
+                  提醒
+                </ion-segment-button>
+                <ion-segment-button value="cj">
+                  创建
+                </ion-segment-button>
+                <ion-segment-button value="ks">
+                  开始
+                  </ion-segment-button>
+                <ion-segment-button value="js">
+                  结束
+                  </ion-segment-button>
+                <ion-segment-button value="gd">
+                  归档
+                  </ion-segment-button>
+    
+            </ion-segment>
+        </div>
+    
+        <div [ngSwitch]="tabs">
+            <div class="bottom_content">
+                <div *ngSwitchCase="'tx'">
+                    <div class="tx_list" *ngIf="istxList" >
+                        <ion-item *ngFor="let l of list_title" >
+                          {{l.tx}}
+                        </ion-item>
+                    </div>
+                    <div class="tx null" *ngIf="!istxList" >
+                          <ion-icon name="filing" text-center></ion-icon>
+                          <p>在当前时间没有设置过提醒</p>
+                    </div>
+               </div>
+            </div>
+            <div class="bottom_content">
+                <div *ngSwitchCase="'cj'">
+                    <div class="tx_list" *ngIf="iscjList" >
+                          <ion-item *ngFor="let l of list_title" >
+                          {{l.cj}}
+                        </ion-item>
+                    </div>
+                    <div class="tx null" *ngIf="!iscjList" >
+                        <ion-icon name="filing" text-center></ion-icon>
+                        <p>在当前时间没有创建过事项</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="bottom_content">
+                <div *ngSwitchCase="'ks'">
+                    <div class="tx_list" *ngIf="iscjList" >
+                          <ion-item *ngFor="let l of list_title" >
+                          {{l.ks}}
+                        </ion-item>
+                    </div>
+                    <div class="tx null" *ngIf="!iscjList" >
+                        <ion-icon name="filing" text-center></ion-icon>
+                        <p>在当前时间没有事项开始过</p>
+                   </div>
+                  </div>
+            </div>
+            <div class="bottom_content">
+                <div *ngSwitchCase="'js'">
+                    <div class="tx_list" *ngIf="iscjList" >
+                         <ion-item *ngFor="let l of list_title" >
+                          {{l.js}}
+                        </ion-item>
+                    </div>
+                    <div class="tx null" *ngIf="!iscjList" >
+                        <ion-icon name="filing" text-center></ion-icon>
+                        <p>在当前时间没有事项结束过</p>
+                  </div>
+                  </div>
+            </div>
+            <div class="bottom_content">
+                <div *ngSwitchCase="'gd'">
+                    <div class="tx_list" *ngIf="iscjList" >
+                        <ion-item *ngFor="let l of list_title" >
+                          {{l.gd}}
+                        </ion-item>
+                    </div>
+                    <div class="tx null" *ngIf="!iscjList" >
+                        <ion-icon name="filing" text-center></ion-icon>
+                        <p>在当前时间没有归档过事项</p>
+                  </div>
+                  </div>
+            </div>
+        </div>
+      </div>

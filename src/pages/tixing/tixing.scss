@@ -1,0 +1,80 @@
+page-tixing {
+    .ml{
+        margin-left: 1rem;
+    }
+
+   
+    .settingsIcon{
+        font-size: 20px;
+    }
+    .top{
+        // background-color: green;
+        height: 38px;
+        line-height:  38px;
+        width: 100%;
+        // border-bottom: 1px solid #666;
+        box-shadow: 1px 1px 5px #888888;
+        display: flex;
+        
+        .more{
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+       
+    }
+
+    .mid{
+        // background-color: yellowgreen;
+        // height: 30rem;
+        // width: 100%;
+        .upicon{
+            text-align: center;
+            margin-bottom: 5px;
+            color: black;
+            font-size: 20px !important;
+        }
+    }
+
+    .bottom{
+        // background-color: orange;
+        // height: 30rem;
+        width: 100%;
+
+        .bottom_content{
+            ion-icon{
+                font-size: 10rem;
+                text-align: center;
+                display: block;
+                color: rgb(207, 202, 194)
+            }
+            p{
+                text-align: center;
+            }
+            ion-item{
+                top: 2px;
+            }
+        }
+    }
+
+    .bottom_header{
+        // border-top: rgb(180, 179, 179) 1px solid;
+        // border-bottom: rgb(180, 179, 179) 1px solid;
+        box-shadow: 1px 1px 5px #888888;
+        // border-bottom: 0.5px solid #888888;
+    }
+
+    .segment-button{
+        border-style:none !important;
+        color:rgb(189, 182, 182) !important;
+    }
+
+    .segment-activated{
+        color:#488aff !important;
+        background-color:transparent !important;
+        font-weight: bold  !important;
+    }
+
+    .calendar{
+        margin: 0;
+    }
+}

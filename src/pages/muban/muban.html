@@ -1,0 +1,131 @@
+<!--
+  Generated template for the MubanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="dark">
+
+      <ion-buttons start>
+          <button ion-button [navPush]="SettingsPage">
+            <ion-icon name="cog" class="settingsIcon"></ion-icon>
+          </button>
+     </ion-buttons>
+
+    <ion-title>
+        <ion-segment [(ngModel)]="tabs">
+        
+          <ion-segment-button value="muban">
+            模板
+          </ion-segment-button>
+          <ion-segment-button value="juese">
+            角色
+          </ion-segment-button>
+      
+        </ion-segment>
+ 
+    </ion-title>
+
+    <ion-buttons end>
+        <button ion-button >
+          <ion-icon name="add" class="settingsIcon"></ion-icon>
+        </button>
+   </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div [ngSwitch]="tabs">
+
+        <div class="tabs1" *ngSwitchCase="'muban'">
+          <div class="muban_top">
+              <ion-searchbar ></ion-searchbar>
+                <!-- <div class="searchbar">
+                    <ion-item>  
+                      <ion-label ><ion-icon name="search" color="danger"></ion-icon></ion-label>
+                      <ion-input type="search" ></ion-input>
+                  </ion-item>
+                </div> -->
+              <div class="twobtn">
+
+                  <div class="more" (tap)="changeisfenlei()">
+                        <p>分类
+                        <ion-icon name="arrow-down" *ngIf="isfenlei" class="selectIcon"></ion-icon>
+                        <ion-icon name="arrow-up" *ngIf="!isfenlei" ></ion-icon>
+                      </p>
+                    </div>
+                  <div class="more" (tap)="changeislaiyuan()">
+                      <p>来源
+                        <ion-icon name="arrow-down" *ngIf="islaiyuan"  class="selectIcon"></ion-icon>
+                        <ion-icon name="arrow-up" *ngIf="!islaiyuan"></ion-icon>
+                      </p>
+                    </div>
+
+              </div>
+          </div>
+          <div class="muban_mid1" *ngIf="isfenlei">
+              <div class="all">
+                  <div class="z1" (tap)="changeAdd()"> 
+                    <ion-icon name="add-circle-outline" *ngIf="isadd" ></ion-icon>
+                    <ion-icon name="remove-circle-outline" *ngIf="!isadd" ></ion-icon>
+                  </div>
+                  <div class="z2"><p>全部</p></div>
+                  <div class="z3"><ion-icon name="open"></ion-icon></div>
+                  <div class="z4"><ion-icon name="more"></ion-icon></div>
+              </div>
+              
+          </div>
+          <div class="muban_mid2" *ngIf="islaiyuan">
+        
+              <ion-chip  style="width:50px;text-align:center;color: #111;background: rgb(216, 212, 212);" class="chipleft ml" (click)="changecolor1()" >
+                  <ion-label>所有</ion-label>
+                </ion-chip>
+              <ion-chip color="danhuise" style="width:50px;text-align:center" class="ml" (click)="changecolor2()">
+                  <ion-label>系统</ion-label>
+                </ion-chip>
+              <ion-chip color="danhuise"  style="width:50px;text-align:center" class="ml">
+                  <ion-label>原创</ion-label>
+                </ion-chip>
+              <ion-chip color="danhuise"  style="width:50px;text-align:center" class="ml">
+                  <ion-label>事项</ion-label>
+                </ion-chip>
+              <ion-chip color="danhuise"  style="width:50px;text-align:center" class="ml">
+                  <ion-label>复制</ion-label>
+                </ion-chip>
+        
+          </div>
+          <div class="muban_btm">
+            <ion-card class="card"><p>暂无模板，点击右上角新建模板吧~</p></ion-card>
+          </div>
+        </div>
+        <div class="tabs2" *ngSwitchCase="'juese'">
+          <div class="muban_top">
+              <div class="more2" (tap)="changeisfenlei()">
+                  <p>分类
+                  <ion-icon name="arrow-down" *ngIf="isfenlei" class="selectIcon"></ion-icon>
+                  <ion-icon name="arrow-up" *ngIf="!isfenlei" ></ion-icon>
+                </p>
+              </div>
+          </div>
+          <div class="muban_mid1" *ngIf="isfenlei">
+              <div class="all">
+                  <div class="z1" (tap)="changeAdd()"> 
+                    <ion-icon name="add-circle-outline" *ngIf="isadd" ></ion-icon>
+                    <ion-icon name="remove-circle-outline" *ngIf="!isadd" ></ion-icon>
+                  </div>
+                  <div class="z2"><p>全部</p></div>
+                  <div class="z3"><ion-icon name="open"></ion-icon></div>
+                  <div class="z4"><ion-icon name="more"></ion-icon></div>
+              </div>
+              
+          </div>
+          
+      </div>
+      
+     </div>
+</ion-content>

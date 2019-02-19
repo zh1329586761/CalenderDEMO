@@ -1,0 +1,122 @@
+<ion-header >
+
+  <ion-navbar color="dark">
+      <ion-buttons start>
+          <button ion-button [navPush]="SettingsPage">
+            <ion-icon name="cog" class="settingsIcon"></ion-icon>
+          </button>
+     </ion-buttons>
+
+    <ion-title  (click)="selectDate()">
+        <!-- <ion-datetime displayFormat="YYYY-MM" min="1990-01" max="2034-12" [(ngModel)]="chromeReleased" cancelText="取消" doneText="确定"></ion-datetime> -->
+        {{date}}
+        <ion-icon name="calendar"></ion-icon>
+    </ion-title>
+
+    <ion-buttons end>
+      <!-- <button ion-button (tap)="calendar.today()">今天</button> -->
+      <button ion-button (click)="today()">今天</button>
+   </ion-buttons>
+    
+
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content >
+  <div class="top">
+
+      <ion-chip  class="ml bluebtn" (tap)="showUnder()"  text-center>
+          <ion-icon name="ios-arrow-down" *ngIf="isshowUnder" ></ion-icon>
+          <ion-icon name="ios-arrow-up" *ngIf="!isshowUnder" ></ion-icon>
+        </ion-chip>
+
+      <ion-chip color="danhuise" style="width:40px;text-align:center" class="chip ml">
+          <ion-label>日</ion-label>
+        </ion-chip>
+      <ion-chip color="danhuise" style="width:80px;text-align:center" class="ml">
+          <ion-label>行事历</ion-label>
+        </ion-chip>
+      <ion-chip color="danhuise"  style="width:50px;text-align:center" class="ml">
+          <ion-label>周</ion-label>
+        </ion-chip>
+
+        <ion-chip color="primary" class="more" (tap)="presentActionSheet()">
+            <ion-icon name="md-more" color="primary"></ion-icon>
+          </ion-chip>
+
+  </div>
+  <div class="mid" *ngIf="isHidden">  <!-- *ngIf="isHidden" 启用隐藏的话 error-->
+    <calendar [(ngModel)]="date" (onChange)="changeDate($event)"></calendar>
+          <!-- 日历插件 -->
+       
+  </div>
+  <div class="bottom">
+    <div class="bottom_header" *ngIf="isHidden" >
+        <ion-segment [(ngModel)]="tabs">
+          
+            <ion-segment-button value="tx">
+              提醒
+            </ion-segment-button>
+            <ion-segment-button value="cj">
+              创建
+            </ion-segment-button>
+            <ion-segment-button value="ks">
+              开始
+              </ion-segment-button>
+            <ion-segment-button value="js">
+              结束
+              </ion-segment-button>
+            <ion-segment-button value="gd">
+              归档
+              </ion-segment-button>
+
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="tabs">
+        <div class="bottom_content">
+            <div *ngSwitchCase="'tx'">
+                <div class="tx_list" *ngIf="istxList" >
+                    <ion-item *ngFor="let l of list_title" >
+                      {{l.tx}}
+                    </ion-item>
+                </div>
+                <div class="tx null" *ngIf="!istxList" >
+                      <ion-icon name="filing" text-center></ion-icon>
+                      <p>在当前时间没有设置过提醒</p>
+                </div>
+           </div>
+        </div>
+        <div class="bottom_content">
+            <div *ngSwitchCase="'cj'">
+                    <ion-icon name="filing" text-center></ion-icon>
+                    <p>在当前时间没有创建过事项</p>
+              </div>
+        </div>
+        <div class="bottom_content">
+            <div *ngSwitchCase="'ks'">
+                    <ion-icon name="filing" text-center></ion-icon>
+                    <p>在当前时间没有事项开始过</p>
+              </div>
+        </div>
+        <div class="bottom_content">
+            <div *ngSwitchCase="'js'">
+                    <ion-icon name="filing" text-center></ion-icon>
+                    <p>在当前时间没有事项结束过</p>
+              </div>
+        </div>
+        <div class="bottom_content">
+            <div *ngSwitchCase="'gd'">
+                    <ion-icon name="filing" text-center></ion-icon>
+                    <p>在当前时间没有归档过事项</p>
+              </div>
+        </div>
+    </div>
+  </div>
+
+
+ 
+
+</ion-content>

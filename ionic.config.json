@@ -1,0 +1,7 @@
+{
+  "name": "goodApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

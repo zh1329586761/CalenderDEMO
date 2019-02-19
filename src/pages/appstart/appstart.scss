@@ -1,0 +1,32 @@
+page-appstart {
+    .login_pc{
+        width: 100%;
+        height:100%;
+        background-image: url(../../assets/imgs/start.jpg);
+        background-size: 200%;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .btn3{
+        margin-top: 110%;
+        margin-left: 35%;
+        // left: -50px;
+        top: 200px;
+    }
+    .login_btn{
+        width: 100px;
+        height: 30px;
+
+        line-height: 30px;
+        text-align: center;
+        // background-color: rgb(165, 170, 168);
+        border: 1px solid #666;
+        margin-top: 20px;
+        font-weight: bold;
+        
+        // display: inline-block;
+    }
+    
+}

@@ -1,0 +1,169 @@
+page-muban {
+    
+    .settingsIcon{
+        font-size: 20px;
+    }
+
+    .segment-button.segment-activated{
+        background-color: transparent !important;
+        color: #fff !important;
+        
+    }
+    .segment-button{
+        max-width: 7rem !important;
+        color: rgb(233, 225, 225) !important;
+        background-color: transparent !important;
+        border-style: none !important;
+        font-size: 1.5rem !important;
+        border-radius: 0px !important;
+    }  
+    
+    
+    .muban_mid1{
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        // background-color: yellowgreen;
+        float: left;
+        margin-bottom: 2rem;
+    }
+    .muban_mid2{
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        // background-color: green;
+        
+        ion-chip{
+            height: 2rem;
+            line-height: 2rem;
+            font-size: 10px;
+            margin:  0;
+            width: 2rem;
+            height: 2rem;
+            margin-left: 0.1rem;
+        }
+        .chipleft{
+            margin-left: 1rem;
+        }
+
+    }
+    .card{
+        
+        height: 5rem;
+        line-height: 5rem;
+        
+        p{text-indent: 1em;}
+    }
+
+    .muban_top{ 
+        width: 100%;
+        height: 4rem;
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        // display:inline-block;
+        .searchbar{
+            // background-color:green !important;
+        }
+        ion-searchbar{
+            width: 70%;
+            background: transparent;
+            border-radius: 50%;
+        }
+        .twobtn{
+            // display: flex; 
+            // display:inline-block;
+            
+            .more{
+                width: 4rem;
+                // height: 3rem;
+                display:inline-block;
+                // background-color: dodgerblue;
+                ion-icon{
+                    color: black;
+                    float: right;
+                    margin-right: 5px;
+                    line-height: 2rem;
+                }
+                .selectIcon{
+                    // color: #488aff;
+                    color: red;
+                }
+            }
+         }
+    }
+    
+    
+  
+
+    .all{
+        width: 100%;
+        // height: 2.5rem;
+        // line-height: 2.5rem;
+        background-color:rgb(116, 184, 240);
+        float: left;
+        overflow: hidden;
+        .z1{
+            margin-left: 10px;
+            width: 2.5rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            // background-color: aqua;
+            float: left;
+            text-align: center;
+        }
+        .z2{
+            width: 2.5rem;
+            height: 2.5rem; 
+            margin-left: 2px;
+            // line-height: 2.5rem;
+            // background-color: green;
+            float: left;
+            text-align: center;
+            vertical-align:middle;
+            p{  
+                // display: block;
+                -webkit-margin-before: 0em;
+                -webkit-margin-after: 0em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-size:2px;
+                line-height: 2.5rem;
+            }
+        }
+        .z3{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 5px;
+            line-height: 2.5rem;
+            // background-color: chartreuse;
+            float: right;
+            text-align: center;
+        }
+        .z4{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 5px;
+            line-height: 2.5rem;
+            // background-color: darksalmon;
+            float: right;
+            text-align: center;
+        }
+    }
+
+   
+       
+            .more2{
+                display: block;
+                margin-left: auto;
+                margin-right: 5px;
+                // margin-right: 90px;
+                width: 4rem;
+                // height: 3rem;
+                // background-color: dodgerblue;
+               
+            }
+            .selectIcon{
+                // color: #488aff;
+                color: red;
+            }
+}

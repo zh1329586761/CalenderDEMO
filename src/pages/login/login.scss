@@ -1,0 +1,21 @@
+page-login {
+
+.login-btn1{
+    margin:20px auto;
+    width: 70%;
+}
+.list-end span{
+    font-size: 12px;
+    color:#666;
+}
+.item-ios.item-block .item-inner {
+    padding-right: 0px;
+}
+.item-ios [item-end] {
+    margin: 0px;
+}
+.label-ios + ion-input .text-input, .label-ios + ion-textarea .text-input, .label-ios + .input + .cloned-input {
+    margin-left: 8px;
+    width: calc(100% - (16px / 2) - 16px);
+}
+}
